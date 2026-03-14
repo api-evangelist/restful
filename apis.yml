@@ -1,0 +1,15 @@
+name: RESTful
+description: Representational State Transfer (REST) is an architectural style for
+  designing networked applications, using stateless communication and standard HTTP
+  methods for web services. Modern development teams rely on it to improve code quality,
+  collaboration, and delivery speed.
+url: https://restfulapi.net/
+tags:
+- API
+- Web Services
+- Architecture
+- HTTP
+created: '2025'
+modified: '2025'
+apis: []
+common: []
