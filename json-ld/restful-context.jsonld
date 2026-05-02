@@ -1,0 +1,54 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "schema": "https://schema.org/",
+    "hydra": "http://www.w3.org/ns/hydra/core#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "oa": "http://www.w3.org/ns/oa#",
+    "rest": "https://api-evangelist.github.io/restful/vocab/",
+
+    "RESTfulAPI": "schema:WebAPI",
+    "Constraint": "rest:Constraint",
+    "MaturityLevel": "rest:MaturityLevel",
+    "ResourcePattern": "rest:ResourcePattern",
+
+    "id": "@id",
+    "type": "@type",
+    "name": "schema:name",
+    "description": "schema:description",
+    "version": "schema:version",
+    "baseUrl": {
+      "@id": "hydra:entrypoint",
+      "@type": "@id"
+    },
+    "documentationUrl": {
+      "@id": "hydra:apiDocumentation",
+      "@type": "@id"
+    },
+    "specificationUrl": {
+      "@id": "schema:schemaUrl",
+      "@type": "@id"
+    },
+    "authentication": "rest:authentication",
+    "maturityLevel": {
+      "@id": "rest:maturityLevel",
+      "@type": "xsd:integer"
+    },
+    "tags": {
+      "@id": "schema:keywords",
+      "@container": "@list"
+    },
+    "constraint": "rest:constraint",
+    "title": "dcterms:title",
+    "definition": "dcterms:description",
+    "created": {
+      "@id": "dcterms:created",
+      "@type": "xsd:date"
+    },
+    "modified": {
+      "@id": "dcterms:modified",
+      "@type": "xsd:date"
+    }
+  }
+}

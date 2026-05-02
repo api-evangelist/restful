@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api-evangelist.github.io/restful/schemas/api-description",
+  "title": "RESTful API Description",
+  "description": "Minimal schema for describing a RESTful API — its identity, endpoints, and interface characteristics.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for this API"
+    },
+    "name": {
+      "type": "string",
+      "description": "Human-readable API name"
+    },
+    "description": {
+      "type": "string",
+      "description": "What the API does and who it is for"
+    },
+    "version": {
+      "type": "string",
+      "description": "API version (e.g., 1.0, v2, 2026-05-01)"
+    },
+    "baseUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "Base URL for all API endpoints"
+    },
+    "documentationUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL of the human-readable API documentation"
+    },
+    "specificationUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL of the machine-readable OpenAPI specification"
+    },
+    "authentication": {
+      "type": "object",
+      "description": "Authentication requirements",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["none", "apiKey", "bearer", "basic", "oauth2", "openid"],
+          "description": "Authentication scheme"
+        },
+        "documentationUrl": {
+          "type": "string",
+          "format": "uri",
+          "description": "Authentication setup documentation"
+        }
+      }
+    },
+    "maturityLevel": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 3,
+      "description": "Richardson Maturity Model level (0-3)"
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Domain tags for classification"
+    }
+  },
+  "required": ["name", "baseUrl"]
+}

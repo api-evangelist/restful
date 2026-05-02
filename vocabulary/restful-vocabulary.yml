@@ -1,0 +1,157 @@
+name: RESTful Vocabulary
+description: >-
+  Core vocabulary for the RESTful architectural style, covering REST
+  constraints, design principles, maturity levels, resource patterns, and
+  hypermedia concepts.
+tags:
+  - Architecture
+  - HTTP
+  - REST
+  - Vocabulary
+created: '2026-05-02'
+modified: '2026-05-02'
+terms:
+  - term: REST Constraints
+    definition: >-
+      The six architectural constraints that define REST: (1) Client-Server —
+      separation of concerns; (2) Statelessness — each request is self-contained;
+      (3) Cacheability — responses may be cached; (4) Layered System — clients
+      don't know if connected directly to origin server; (5) Uniform Interface —
+      standardized interaction via URIs, HTTP methods, and representations;
+      (6) Code-On-Demand (optional) — servers may send executable code.
+    tags:
+      - Core Concept
+      - Constraints
+
+  - term: Client-Server
+    definition: >-
+      REST constraint that separates the user interface (client) from data
+      storage (server), allowing each to evolve independently. The interface
+      between them is defined by the REST API contract.
+    tags:
+      - Constraints
+
+  - term: RESTful
+    definition: >-
+      An adjective describing a system or API that conforms to the REST
+      architectural constraints. A RESTful API uses HTTP methods semantically,
+      is stateless, and identifies resources via URIs.
+    tags:
+      - Core Concept
+
+  - term: Richardson Maturity Model
+    definition: >-
+      A maturity model for REST APIs with four levels: Level 0 (single URI,
+      single method — "swamp of POX"), Level 1 (multiple URIs, single method),
+      Level 2 (multiple URIs, HTTP verbs), Level 3 (hypermedia controls /
+      HATEOAS). Most modern APIs target Level 2.
+    tags:
+      - Best Practices
+      - Maturity Model
+
+  - term: Level 0 REST
+    definition: >-
+      The lowest REST maturity level: uses a single endpoint and a single HTTP
+      method (usually POST) for all operations. Essentially RPC over HTTP.
+      Example: SOAP services.
+    tags:
+      - Maturity Model
+
+  - term: Level 2 REST
+    definition: >-
+      REST maturity level using multiple URIs for different resources and
+      correct HTTP methods (GET, POST, PUT, DELETE) to express intent. The
+      most common level in real-world APIs.
+    tags:
+      - Maturity Model
+
+  - term: Level 3 REST
+    definition: >-
+      The highest REST maturity level: adds hypermedia controls (HATEOAS)
+      to responses, allowing clients to discover available actions dynamically
+      without hardcoding URLs.
+    tags:
+      - HATEOAS
+      - Maturity Model
+
+  - term: Uniform Interface
+    definition: >-
+      The central REST constraint. Defines four sub-constraints: resource
+      identification in requests (URIs), resource manipulation through
+      representations, self-descriptive messages, and hypermedia as the
+      engine of application state.
+    tags:
+      - Constraints
+
+  - term: Layered System
+    definition: >-
+      REST constraint allowing intermediaries (proxies, gateways, CDNs,
+      load balancers) between client and server. Each layer only sees the
+      adjacent layer, enabling scalability and security.
+    tags:
+      - Constraints
+
+  - term: Cacheability
+    definition: >-
+      REST constraint requiring responses to label themselves as cacheable
+      or non-cacheable. Caching improves performance and scalability by
+      reusing prior responses.
+    tags:
+      - Caching
+      - Constraints
+
+  - term: OpenAPI Specification
+    definition: >-
+      The most widely-used standard for describing RESTful HTTP APIs. Defines
+      paths, operations, parameters, request/response schemas, authentication,
+      and metadata in YAML or JSON. Enables tooling for documentation, SDK
+      generation, and validation.
+    tags:
+      - Standards
+      - Tooling
+
+  - term: URI Design
+    definition: >-
+      The practice of creating meaningful, hierarchical, and consistent
+      URIs for REST resources. Best practices: use plural nouns (/users),
+      avoid verbs (/getUser → /users/{id}), use lowercase, and use hyphens
+      for readability.
+    tags:
+      - API Design
+      - Best Practices
+
+  - term: Semantic Versioning in REST
+    definition: >-
+      Approach to versioning REST APIs. Major version changes (breaking) are
+      indicated via URL path (/v1/, /v2/) or Accept headers. Minor and patch
+      changes should be backward-compatible.
+    tags:
+      - API Design
+      - Versioning
+
+  - term: JSON:API
+    definition: >-
+      A specification (jsonapi.org) for building APIs in JSON that standardizes
+      resource representation, relationships, error objects, and metadata.
+      Supports sparse fieldsets, compound documents, and filtering conventions.
+    tags:
+      - Hypermedia
+      - Standards
+
+  - term: HAL
+    definition: >-
+      Hypertext Application Language. A minimal JSON/XML format for embedding
+      hypermedia links in REST API responses. Uses _links for navigation and
+      _embedded for inline sub-resources.
+    tags:
+      - Hypermedia
+      - Standards
+
+  - term: RFC 7807
+    definition: >-
+      "Problem Details for HTTP APIs" — IETF standard defining a JSON/XML
+      format for machine-readable error responses. Fields: type (URI), title,
+      status (HTTP code), detail, instance.
+    tags:
+      - Error Handling
+      - Standards

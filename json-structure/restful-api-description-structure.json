@@ -1,0 +1,16 @@
+{
+  "name": "RESTful API Description",
+  "description": "Minimal descriptor for a RESTful API, capturing identity, base URL, authentication type, maturity level, and documentation links.",
+  "fields": [
+    { "name": "id", "type": "string", "description": "Unique API identifier", "required": false },
+    { "name": "name", "type": "string", "description": "Human-readable API name", "required": true },
+    { "name": "description", "type": "string", "description": "What the API does and its audience", "required": false },
+    { "name": "version", "type": "string", "description": "API version string", "required": false },
+    { "name": "baseUrl", "type": "string", "description": "Base URL for all endpoints", "required": true },
+    { "name": "documentationUrl", "type": "string", "description": "Human-readable documentation URL", "required": false },
+    { "name": "specificationUrl", "type": "string", "description": "OpenAPI or other machine-readable spec URL", "required": false },
+    { "name": "authentication.type", "type": "string", "description": "Auth scheme: none, apiKey, bearer, basic, oauth2, openid", "required": false },
+    { "name": "maturityLevel", "type": "integer", "description": "Richardson Maturity Model level 0-3", "required": false },
+    { "name": "tags", "type": "array[string]", "description": "Domain classification tags", "required": false }
+  ]
+}
