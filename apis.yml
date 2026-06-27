@@ -99,7 +99,7 @@ apis:
       - RFC
       - Standards
     properties:
-      - type: Standard
+      - type: Standards
         url: https://datatracker.ietf.org/doc/html/rfc9110
 
 common:
