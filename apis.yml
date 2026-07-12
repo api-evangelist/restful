@@ -103,6 +103,8 @@ apis:
         url: https://datatracker.ietf.org/doc/html/rfc9110
 
 common:
+  - type: DomainSecurity
+    url: security/restful-domain-security.yml
   - type: Roy Fielding REST Dissertation
     url: https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm
   - type: IANA HTTP Status Codes
