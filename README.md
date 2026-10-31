@@ -64,54 +64,94 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Representational State Transfer (REST) is an architectural style for designing networked applications defined by Roy Fielding in his 2000 doctoral dissertation. RESTful systems use stateless HTTP communication and a uniform interface to enable scalable, loosely coupled web services. This index covers the REST architectural style, maturity models, hypermedia formats, and key specifications.
+Representational State Transfer (REST) is an architectural style for designing networked applications using stateless HTTP communication and uniform interfaces. RESTful describes systems and APIs that conform to the REST constraints: client-server separation, statelessness, cacheability, layered system, uniform interface, and (optionally) code-on-demand. This index covers the RESTful design paradigm including maturity models, API design patterns, documentation formats, and key reference implementations.
 
-## References
+**Areas:** Architecture · HTTP · Web Services
 
-| Type | URL |
-|------|-----|
-| Roy Fielding Dissertation | https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm |
-| Richardson Maturity Model | https://martinfowler.com/articles/richardsonMaturityModel.html |
-| OpenAPI Specification | https://spec.openapis.org/oas/latest.html |
-| RFC 9110 HTTP Semantics | https://datatracker.ietf.org/doc/html/rfc9110 |
-| IANA HTTP Status Codes | https://www.iana.org/assignments/http-status-codes/ |
+## RESTful on APIs.io
 
-## Notable Specifications and Patterns
+Everything profiled for RESTful is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/restful/](https://apis.io/providers/restful/)** — or go straight to one of the APIs or properties below.
 
-| Name | Description | URL |
-|------|-------------|-----|
-| Richardson Maturity Model | REST maturity levels 0-3 | https://martinfowler.com/articles/richardsonMaturityModel.html |
-| JSON:API | Standardized JSON API format | https://jsonapi.org/ |
-| HAL | Hypertext Application Language | https://stateless.co/hal_specification.html |
-| OpenAPI Specification | REST API description standard | https://spec.openapis.org/oas/latest.html |
-| RFC 9110 HTTP Semantics | HTTP methods, status codes, headers | https://datatracker.ietf.org/doc/html/rfc9110 |
+### APIs (5)
 
-## Artifacts
+- [Richardson Maturity Model](https://apis.io/apis/restful/richardson-maturity-model/) — A model by Leonard Richardson that breaks down the maturity of a RESTful API into four levels: Level 0 (The Swamp of POX), Level 1 (Resources), Level 2…
+- [JSON:API](https://apis.io/apis/restful/json-api/) — A specification for building APIs in JSON that standardizes resource representation, relationships, error handling, and metadata. Reduces over-fetching and…
+- [HAL - Hypertext Application Language](https://apis.io/apis/restful/hal-specification/) — A simple format for including hypermedia links in JSON or XML API responses. HAL uses _links for links and _embedded for embedded resources, providing a…
+- [OpenAPI Specification](https://apis.io/apis/restful/openapi-specification/) — The OpenAPI Specification (OAS) defines a standard, language-agnostic interface for HTTP APIs. OpenAPI 3.x is the most widely-used format for describing…
+- [RFC 9110 - HTTP Semantics](https://apis.io/apis/restful/http-rfc-9110/) — The IETF standard defining HTTP semantics: methods, status codes, header fields, content negotiation, authentication, and request/response message formats.…
 
-### JSON Schemas
+### Published properties
 
-| File | Description |
-|------|-------------|
-| [json-schema/restful-api-description-schema.json](json-schema/restful-api-description-schema.json) | Schema for describing a RESTful API |
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### JSON Structures
+#### JSON Schema (1)
 
-| File | Description |
-|------|-------------|
-| [json-structure/restful-api-description-structure.json](json-structure/restful-api-description-structure.json) | RESTful API description field reference |
+The data models the API reads and writes.
 
-### JSON-LD Context
+- [RESTful API Description](https://apis.io/schemas/restful/restful-api-description/)
 
-| File | Description |
-|------|-------------|
-| [json-ld/restful-context.jsonld](json-ld/restful-context.jsonld) | JSON-LD context for REST architectural concepts |
+#### JSON Structure (1)
 
-### Vocabulary
+Data models expressed in JSON Structure.
 
-| File | Description |
-|------|-------------|
-| [vocabulary/restful-vocabulary.yml](vocabulary/restful-vocabulary.yml) | REST constraints, maturity model, hypermedia, and design principles |
+- [Restful Api Description Structure](https://apis.io/json-structure/restful/restful-api-description-structure/)
 
-## Maintainers
+#### JSON-LD (1)
 
-- **Kin Lane** — kin@apievangelist.com
+Linked-data contexts for the provider's vocabulary.
+
+- [Restful Context](https://apis.io/jsonld/restful/restful-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [RESTful Vocabulary](https://apis.io/vocabularies/restful/restful-vocabulary/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [RESTful — jsonschema rules](https://apis.io/rules/restful/restful-jsonschema-spectral-rules/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Restful Domain Security](https://apis.io/security/restful/restful-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Restful Plans Pricing](https://apis.io/plans/restful/restful-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Restful Rate Limits](https://apis.io/rate-limits/restful/restful-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Restful Finops](https://apis.io/finops/restful/restful-finops/)
+
+## API Evangelist rating
+
+**Unrated** — no public website could be reached for this company, so there was almost nothing to measure and nothing a reader could check.
+
+This is not a score of zero. No rating is published for this company. If that is wrong because something public exists that we missed, say so on this repository or email [info@apievangelist.com](mailto:info@apievangelist.com) and it will be re-run — free, and no justification needed.
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for RESTful: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/restful/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
